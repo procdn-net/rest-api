@@ -8,14 +8,14 @@ Create JWT. User authorization.
 
 *Example request*
 
-.. code-block:: console
+.. code-block:: shell
 
    curl -X POST https://api.procdn.net/api/v1/tokens \
-   -H 'Content-Type: application/json' \
-   -d '{
-      "email": "{{email}}",
-      "password": "{{password}}"
-   }'
+      -H 'Content-Type: application/json' \
+      -d '{
+         "email": "{{email}}",
+         "password": "{{password}}"
+      }'
 
 
 *Response*
@@ -37,6 +37,7 @@ Create JWT. User authorization.
 *JWT Content*
 
 .. code-block:: json
+
    {
       "token": "6e1c58be-4da0-4072-81e7-7e412d3640b6",
       "email": "vanzhiganov@ya.ru",
@@ -55,11 +56,13 @@ Get Account Details.
 *Request*
 
 .. code-block:: console
+
    curl https://api.procdn.net/api/v1/user/details
 
 *Response*
 
 .. code-block:: json
+
    {
       "payload": {
          "address": "",
@@ -92,6 +95,7 @@ Get Account Attributes.
 *Response*
 
 .. code-block:: json
+
    {
       "payload": [
             {
@@ -120,6 +124,7 @@ Create a new Account Attribute.
 *Request*
 
 .. code-block:: console
+
    curl -X POST "https://api.procdn.net/api/v1/user/attributes" \
       -H "Authorization: ${JWT}" \
       -H "Content-Type: application/json" \
@@ -132,6 +137,7 @@ Create a new Account Attribute.
 *Response*
 
 .. code-block:: json
+
    {
    }
 
@@ -155,7 +161,7 @@ Delete Account Attribute.
    }
 
 GET /api/v1/user/attributes/{attribute}
--------------------------------------------
+---------------------------------------
 
 Get Account Attribute.
 
