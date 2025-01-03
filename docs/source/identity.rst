@@ -36,18 +36,16 @@ Create JWT. User authorization.
 
 *JWT Content*
 
-[source,json]
-----
-{
-	"token": "6e1c58be-4da0-4072-81e7-7e412d3640b6",
-	"email": "vanzhiganov@ya.ru",
-	"user_id": "6cc50407-92a3-4189-89e5-53b3cdab53c2",
-	"attrs": {
-		"phone": "+79832756171",
-		"mobile": "+79832756171"
-	}
-}
-----
+.. code-block:: json
+   {
+      "token": "6e1c58be-4da0-4072-81e7-7e412d3640b6",
+      "email": "vanzhiganov@ya.ru",
+      "user_id": "6cc50407-92a3-4189-89e5-53b3cdab53c2",
+      "attrs": {
+         "phone": "+79832756171",
+         "mobile": "+79832756171"
+      }
+   }
 
 === GET /api/v1/user/details
 
@@ -154,20 +152,17 @@ Delete Account Attribute.
 
 *Request*
 
-[source,shell]
-----
-curl -X DELETE "https://api.procdn.net/api/v1/user/attributes/mobile" \
-	-H "Authorization: ${JWT}"
-----
+.. code-block:: console
+   curl -X DELETE "https://api.procdn.net/api/v1/user/attributes/mobile" \
+      -H "Authorization: ${JWT}"
+
 
 *Response*
 
 
-[source,json]
-----
-{
-}
-----
+.. code-block:: json
+   {
+   }
 
 GET /api/v1/user/attributes/{attribute}
 -------------------------------------------
@@ -176,19 +171,17 @@ Get Account Attribute.
 
 *Request*
 
-[source,shell]
-----
-curl "https://api.procdn.net/api/v1/user/attributes/mobile" \
-	-H "Authorization: ${JWT}"
-----
+.. code-block:: console
+
+   curl "https://api.procdn.net/api/v1/user/attributes/mobile" \
+      -H "Authorization: ${JWT}"
 
 *Response*
 
-[source,json]
-----
-{
-}
-----
+.. code-block:: json
+
+   {
+   }
 
 GET /api/v1/user/secret
 -----------------------
