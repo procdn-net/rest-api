@@ -1,5 +1,5 @@
-identity endpoint
-=================
+Identity Endpoints
+==================
 
 POST /api/v1/tokens
 -------------------
@@ -143,14 +143,14 @@ Delete Account Attribute.
 *Request*
 
 .. code-block:: console
+
    curl -X DELETE "https://api.procdn.net/api/v1/user/attributes/mobile" \
       -H "Authorization: ${JWT}"
 
-
 *Response*
 
-
 .. code-block:: json
+
    {
    }
 
