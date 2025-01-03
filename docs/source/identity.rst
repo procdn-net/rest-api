@@ -47,76 +47,70 @@ Create JWT. User authorization.
       }
    }
 
-=== GET /api/v1/user/details
+GET /api/v1/user/details
+------------------------
 
 Get Account Details.
 
 *Request*
 
-[source,shell]
-----
-curl https://api.procdn.net/api/v1/user/details
-----
+.. code-block:: console
+   curl https://api.procdn.net/api/v1/user/details
 
 *Response*
 
-[source,json]
-----
-{
-    "payload": {
-        "address": "",
-        "city": "",
-        "country": "",
-        "fname": "test1",
-        "lname": "",
-        "state": "",
-        "zipcode": "0"
-    },
-    "status": {
-        "code": "CDN_0000",
-        "message": "Success.",
-        "severity": "info"
-    }
-}
-----
+.. code-block:: json
+   {
+      "payload": {
+         "address": "",
+         "city": "",
+         "country": "",
+         "fname": "test1",
+         "lname": "",
+         "state": "",
+         "zipcode": "0"
+      },
+      "status": {
+         "code": "CDN_0000",
+         "message": "Success.",
+         "severity": "info"
+      }
+   }
 
-
-=== GET /api/v1/user/attributes
+GET /api/v1/user/attributes
+---------------------------
 
 Get Account Attributes.
 
 *Request*
 
-[source,shell]
-----
-curl "https://api.procdn.net/api/v1/user/attributes" \
-	-H "Authorization: ${JWT}"
-----
+.. code-block:: console
+
+   curl "https://api.procdn.net/api/v1/user/attributes" \
+      -H "Authorization: ${JWT}"
 
 *Response*
 
-[source,json]
-----
-{
-    "payload": [
-        {
+.. code-block:: json
+   {
+      "payload": [
+            {
             "name": "phone",
             "type": "string",
             "value": "+79832756171"
-        },
-        {
+         },
+         {
             "name": "mobile",
             "type": "string",
             "value": "+79832756171"
-        }
-    ],
-    "status": {
-        "code": "CDN_0000",
-        "message": "Success.",
-        "severity": "info"
-    }
-}
-----
+         }
+      ],
+      "status": {
+         "code": "CDN_0000",
+         "message": "Success.",
+         "severity": "info"
+      }
+   }
 
 POST /api/v1/user/attributes
 ----------------------------
@@ -125,25 +119,21 @@ Create a new Account Attribute.
 
 *Request*
 
-[source,shell]
-----
-curl -X POST "https://api.procdn.net/api/v1/user/attributes" \
-	-H "Authorization: ${JWT}" \
-    -H "Content-Type: application/json" \
-    -d '{
-        "name": "mobile",
-        "type": "string",
-        "value": "+79832756171"
-    }'
-----
+.. code-block:: console
+   curl -X POST "https://api.procdn.net/api/v1/user/attributes" \
+      -H "Authorization: ${JWT}" \
+      -H "Content-Type: application/json" \
+      -d '{
+         "name": "mobile",
+         "type": "string",
+         "value": "+79832756171"
+      }'
 
 *Response*
 
-[source,json]
-----
-{
-}
-----
+.. code-block:: json
+   {
+   }
 
 DELETE /api/v1/user/attributes/{attribute}
 ------------------------------------------
